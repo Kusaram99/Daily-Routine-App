@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Todo List</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <h1 class="logo">Todo List</h1>
+            <p>Write your daily routine...</p>
+        </nav>
+    </header>
+
+    <section>
+        <div class="todo_update_container update_form_hide">
+            <div class="form-container form-container2">
+                <form class="todo-form" onsubmit="return false">
+                    <div class="input_box">
+                        <label for="todo">Title</label>
+                        <input class="todo-input title_text_update" type="text" placeholder="Write here..." name="todo"
+                            id="todo">
+                    </div>
+                    <div class="input_box">
+                        <label>Notes</label>
+                        <textarea class="todo-input textarea textarea_update" placeholder="Write here..."
+                            name="todo">Write here your daily routine...</textarea>
+                    </div>
+                    <div class="update_btn_container">
+                        <button class="update_btn" onclick="updateDataBtn()">Update</button>
+                        <button class="update_btn" onclick="cancelUpdateBtn()">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="todo-container">
+        <div class="score_container">
+            <div class="score_box_1">
+                <span>TOTAL NOTES : </span>
+                <span id="total_notes"> 0</span>
+            </div>
+        </div>
+        <div class="form-container">
+            <form class="todo-form" onsubmit="return false">
+                <div class="input_box">
+                    <label for="todo">Title</label>
+                    <input class="todo-input title_text" type="text" placeholder="Write here..." name="todo"
+                        id="title_text" required>
+                </div>
+                <div class="input_box">
+                    <label>Notes</label>
+                    <textarea class="todo-input textarea" placeholder="Write here..." name="todo" id="textarea"
+                        required>Write here your notes...</textarea>
+                </div>
+                <button id="submit_btn" onclick="addNotes()">Submit</button>
+            </form>
+        </div>
+
+        <div class="todo-list">
+        </div>
+    </section>
+
+    <article class="article_container article_hide">
+        <div class="article_inner_container">
+            <span class="material-symbols-outlined" id="close_btn" onclick="closeContent()">
+                close
+            </span>
+            <h1 class="article_title">Hello World!</h1>
+            <p class="article_content"> </p>
+        </div>
+    </article>
+
+    <script defer src="index.js"></script>
+
+</body>
+
+</html>
